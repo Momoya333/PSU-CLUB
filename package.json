@@ -18,11 +18,15 @@
     "lint": "oxfmt && oxlint --fix",
     "lint:check": "oxfmt --check && oxlint",
     "dev": "quasar dev",
+    "api": "json-server --watch api/db.json --host 127.0.0.1 --port 3000",
     "build": "quasar build",
     "postinstall": "quasar prepare --silent"
   },
   "dependencies": {
     "@quasar/extras": "^2.0.3",
+    "axios": "^1.21.1",
+    "pinia": "^4.1.0",
+    "pinia-plugin-persistedstate": "^4.7.1",
     "quasar": "^2.24.0",
     "vue": "^3.5.22",
     "vue-router": "^5.0.6"
@@ -30,6 +34,7 @@
   "devDependencies": {
     "@quasar/app-vite": "^3.5.0",
     "autoprefixer": "^10.4.27",
+    "json-server": "^0.17.4",
     "oxfmt": "^0.x",
     "oxlint": "^1.x",
     "postcss": "^8.5.8"

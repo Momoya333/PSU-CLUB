@@ -1,0 +1,93 @@
+import { defineStore } from 'pinia'
+import { ref, computed } from 'vue'
+import {
+  login as loginService,
+  register as registerService,
+  getProfile
+} from '@/services/auth.service'
+
+export const useAuthStore = defineStore(
+  'auth',
+  () => {
+    const user = ref(null)
+    const accessToken = ref(null)
+    const loading = ref(false)
+    const errorMessage = ref('')
+
+    const isAuthenticated = computed(() => accessToken.value !== null)
+    const role = computed(() => user.value?.role ?? null)
+    const isClubAdmin = computed(() => user.value?.role === 'club_admin')
+
+    const login = async (username, password) => {
+      loading.value = true
+      errorMessage.value = ''
+      try {
+        const response = await loginService(username, password)
+        accessToken.value = response.data.data.accessToken
+        user.value = response.data.data.user
+        return response
+      } catch (error) {
+        errorMessage.value =
+          error.response?.data?.message ?? 'Unable to login.'
+        throw error
+      } finally {
+        loading.value = false
+      }
+    }
+
+    const register = async payload => {
+      loading.value = true
+      errorMessage.value = ''
+      try {
+        const response = await registerService(payload)
+        accessToken.value = response.data.data.accessToken
+        user.value = response.data.data.user
+        return response
+      } catch (error) {
+        errorMessage.value =
+          error.response?.data?.message ?? 'Unable to register.'
+        throw error
+      } finally {
+        loading.value = false
+      }
+    }
+
+    const logout = () => {
+      accessToken.value = null
+      user.value = null
+      errorMessage.value = ''
+      loading.value = false
+    }
+
+    const checkAuth = async () => {
+      if (!accessToken.value || !user.value?.id) {
+        return false
+      }
+      try {
+        const res = await getProfile(user.value.id)
+        user.value = res.data.data
+        return true
+      } catch {
+        logout()
+        return false
+      }
+    }
+
+    return {
+      user,
+      accessToken,
+      loading,
+      errorMessage,
+      isAuthenticated,
+      role,
+      isClubAdmin,
+      login,
+      register,
+      logout,
+      checkAuth
+    }
+  },
+  {
+    persist: true
+  }
+)

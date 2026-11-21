@@ -11,7 +11,7 @@ export default defineConfig((/* ctx */) => {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
-    boot: [],
+    boot: ['pinia', 'axios', 'auth'],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
     css: ['app.scss'],
@@ -31,18 +31,22 @@ export default defineConfig((/* ctx */) => {
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#build
+
     build: {
       target: {
         // browser: 'baseline-widely-available',
         // node: 'node22'
+        browser: ['es2022', 'firefox115', 'chrome115', 'safari14'],
+        node: 'node20'
       },
+      
 
       // https://v2.quasar.dev/quasar-cli-vite/page-routing-with-vue-router#filename-based-routing
       // filenameBasedRouting: true,
 
-      vueRouterMode: 'hash' // available values: 'hash', 'history'
+      vueRouterMode: 'hash', // available values: 'hash', 'history'
       // vueRouterBase,
-
+      csp: false
       // publicPath: '/',
       // define: {},
       // defineEnv: {}
@@ -59,10 +63,18 @@ export default defineConfig((/* ctx */) => {
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#devserver
-    devServer: {
+devServer: {
       // vueDevtools: true,
       // https: true,
-      open: true // opens browser window automatically
+      open: false, // opens browser window automatically
+      port: 9100,
+      proxy: {
+        '/clubs': 'http://127.0.0.1:3000',
+        '/events': 'http://127.0.0.1:3000',
+        '/user': 'http://127.0.0.1:3000',
+        '/users': 'http://127.0.0.1:3000',
+        '/notifications': 'http://127.0.0.1:3000'
+      }
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#framework
@@ -80,7 +92,7 @@ export default defineConfig((/* ctx */) => {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: ['Notify', 'Dialog']
     },
 
     // animations: 'all', // --- includes all animations

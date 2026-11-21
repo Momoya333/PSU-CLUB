@@ -1,0 +1,247 @@
+{
+  "clubs": [
+    {
+      "id": "music",
+      "name": "Music Club",
+      "icon": "music_note",
+      "color": "cyan-6",
+      "members": 214,
+      "description": "ชมรมดนตรี จัดกิจกรรมแจม คอนเสิร์ตเล็ก ๆ และเวิร์กช็อปการเล่นเครื่องดนตรี"
+    },
+    {
+      "id": "coc",
+      "name": "CoC Tech Club",
+      "icon": "code",
+      "color": "teal-5",
+      "members": 155,
+      "description": "ชุมชนคนสาย Tech ของวิทยาลัยการคอมพิวเตอร์ แลกเปลี่ยนความรู้ Startup / Dev / AI"
+    },
+    {
+      "id": "sports",
+      "name": "Sports Society",
+      "icon": "sports_soccer",
+      "color": "orange-6",
+      "members": 321,
+      "description": "รวมคนรักกีฬา ทั้งฟุตบอล แบดมินตัน วิ่ง และกิจกรรมสุขภาพ"
+    },
+    {
+      "id": "photo",
+      "name": "Photography Club",
+      "icon": "photo_camera",
+      "color": "purple-5",
+      "members": 99,
+      "description": "ออกทริปถ่ายภาพ เรียนรู้การแต่งภาพ และประกวดภาพถ่ายประจำปี"
+    },
+    {
+      "id": "volunteer",
+      "name": "Volunteer Club",
+      "icon": "volunteer_activism",
+      "color": "pink-5",
+      "members": 175,
+      "description": "ชมรมอาสาพัฒนาชุมชน ออกค่ายอาสา และกิจกรรมเพื่อสังคม"
+    },
+    {
+      "id": "art",
+      "name": "Art & Design",
+      "icon": "palette",
+      "color": "deep-orange-5",
+      "members": 87,
+      "description": "พื้นที่สำหรับคนรักศิลปะและการออกแบบ มีเวิร์กช็อปและนิทรรศการ"
+    }
+  ],
+  "events": [
+    {
+      "id": "1",
+      "clubId": "music",
+      "title": "Music Club Acoustic Night",
+      "tags": [
+        "Music",
+        "Chill"
+      ],
+      "attendees": 102,
+      "date": "2026-11-20",
+      "location": "Central Lawn",
+      "description": "คืนอะคูสติกสบาย ๆ กับศิลปินจากชมรม พร้อมเปิดเวทีให้ทุกคนขึ้นมาเล่น"
+    },
+    {
+      "id": "2",
+      "clubId": "coc",
+      "title": "CoC Tech Startup Workshop 2",
+      "tags": [
+        "Technology",
+        "Workshop"
+      ],
+      "attendees": 63,
+      "date": "2026-11-24",
+      "location": "CoC Building, Room 301",
+      "description": "เวิร์กช็อปปั้นไอเดียสตาร์ตอัปใน 1 วัน พร้อมโค้ชจากผู้ก่อตั้งจริง"
+    },
+    {
+      "id": "3",
+      "clubId": "sports",
+      "title": "Inter-Faculty Futsal Cup",
+      "tags": [
+        "Sports",
+        "Competition"
+      ],
+      "attendees": 188,
+      "date": "2026-11-27",
+      "location": "Indoor Stadium",
+      "description": "ศึกฟุตซอลชิงถ้วยระหว่างคณะ ลงทีมได้ถึงวันที่ 22 พ.ย."
+    },
+    {
+      "id": "4",
+      "clubId": "photo",
+      "title": "Sunset Photo Walk",
+      "tags": [
+        "Photography",
+        "Outdoor"
+      ],
+      "attendees": 41,
+      "date": "2026-11-29",
+      "location": "Phuket Old Town",
+      "description": "ออกทริปถ่ายภาพช่วง Golden Hour พร้อมเทคนิคจากรุ่นพี่"
+    },
+    {
+      "id": "5",
+      "clubId": "volunteer",
+      "title": "Beach Clean-up Day",
+      "tags": [
+        "Volunteer",
+        "Environment"
+      ],
+      "attendees": 127,
+      "date": "2026-12-02",
+      "location": "Samila Beach",
+      "description": "ร่วมกันเก็บขยะชายหาด พร้อมอาหารเช้าและเสื้อกิจกรรม"
+    },
+    {
+      "id": "6",
+      "clubId": "art",
+      "title": "Poster Design Jam",
+      "tags": [
+        "Design",
+        "Workshop"
+      ],
+      "attendees": 53,
+      "date": "2026-12-05",
+      "location": "Art Studio 2",
+      "description": "แข่งออกแบบโปสเตอร์ใน 3 ชั่วโมง ใช้ได้ทั้ง Figma และมือวาด"
+    },
+    {
+      "id": "7",
+      "clubId": "coc",
+      "title": "Intro to Vue & Quasar",
+      "tags": [
+        "Technology",
+        "Frontend"
+      ],
+      "attendees": 89,
+      "date": "2026-12-08",
+      "location": "CoC Lab 2",
+      "description": "เรียนรู้พื้นฐาน Vue 3 + Quasar สร้างเว็บแอปแรกของคุณ"
+    },
+    {
+      "id": "8",
+      "clubId": "music",
+      "title": "Open Mic Friday",
+      "tags": [
+        "Music",
+        "Open Mic"
+      ],
+      "attendees": 73,
+      "date": "2026-12-12",
+      "location": "Student Center",
+      "description": "เวทีเปิดสำหรับทุกคนที่อยากโชว์ความสามารถ"
+    },
+    {
+      "id": "9",
+      "attendees": 1,
+      "location": "CoC Hall",
+      "tags": [
+        "AI"
+      ],
+      "clubId": "coc",
+      "title": "AI & Hackathon 2026 (Updated)",
+      "date": "2026-12-20",
+      "description": ""
+    }
+  ],
+  "user": {
+    "name": "Nattawas S.",
+    "email": "nattawas488@gmail.com",
+    "faculty": "College of Computing",
+    "year": 4,
+    "bio": "Frontend learner & AI enthusiast · passionate about student tech clubs",
+    "joinedClubs": [
+      "music",
+      "sports",
+      "photo"
+    ],
+    "rsvp": [
+      "3",
+      "9",
+      "1",
+      "6"
+    ],
+    "saved": [
+      "1",
+      "2"
+    ]
+  },
+  "notifications": [
+    {
+      "id": "1",
+      "text": "Music Club posted a new event",
+      "time": "5 min ago",
+      "unread": false
+    },
+    {
+      "id": "2",
+      "text": "CoC Tech Club: Workshop starts soon",
+      "time": "1 hr ago",
+      "unread": false
+    },
+    {
+      "id": "3",
+      "text": "Your RSVP to Futsal Cup is confirmed",
+      "time": "Yesterday",
+      "unread": false
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "nattawas",
+      "password": "123456",
+      "name": "Nattawas S.",
+      "email": "nattawas488@gmail.com",
+      "role": "student"
+    },
+    {
+      "id": "2",
+      "username": "admin_coc",
+      "password": "123456",
+      "name": "CoC Tech Admin",
+      "email": "coc.admin@psu.ac.th",
+      "role": "club_admin",
+      "managedClubId": "coc"
+    },
+    {
+      "username": "sonya67",
+      "password": "123456",
+      "name": "Sonya",
+      "email": "6730611066@gmail.com",
+      "role": "student",
+      "id": "c0i2mZn"
+    },
+    {
+      "username": "nana67",
+      "password": "12345678",
+      "name": "nana67",
+      "email": "nana67@gmail.com",
+      "role": "student",
+      "id": "1nKNSBE"
+    }
+  ]
+}
